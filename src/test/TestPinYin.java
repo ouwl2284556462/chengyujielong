@@ -1,0 +1,18 @@
+package test;
+
+import com.github.stuxuhai.jpinyin.PinyinHelper;
+
+/**
+ * ≤‚ ‘∆¥“Ù 
+ */
+public class TestPinYin {
+
+	public static void main(String[] args) {
+		String[] pinyinList = PinyinHelper.convertToPinyinArray('µƒ');
+		
+		for(String pinyin : pinyinList){
+			System.out.println(pinyin);
+		}
+	}
+
+}
