@@ -2,9 +2,6 @@ package test;
 
 import com.github.stuxuhai.jpinyin.PinyinHelper;
 
-/**
- * ≤‚ ‘∆¥“Ù 
- */
 public class TestPinYin {
 
 	public static void main(String[] args) {

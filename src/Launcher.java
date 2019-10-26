@@ -1,3 +1,5 @@
+import javax.swing.SwingUtilities;
+
 import ui.EntryFrame;
 
 /**
@@ -6,6 +8,6 @@ import ui.EntryFrame;
 public class Launcher {
 	public static void main(String[] args){
 		//创建入口窗口
-		new EntryFrame();
+		SwingUtilities.invokeLater(()->new EntryFrame());
 	}
 }

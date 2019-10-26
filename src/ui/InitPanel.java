@@ -10,6 +10,7 @@ import java.util.concurrent.Executors;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
+import javax.swing.SwingUtilities;
 
 import base.GameManager;
 
@@ -36,24 +37,26 @@ public class InitPanel extends JPanel {
 		progressBar.setBounds(rect);
 		
 		ExecutorService service = Executors.newSingleThreadExecutor();
-		service.execute(new Runnable() {
-			@Override
-			public void run() {
+		service.execute(() -> {
 				try {
-					GameManager.initGameData(val -> {progressBar.setValue(val); 
-					                                 progressBar.paintImmediately(rect);});
-					progressBar.setString("初始化完成！");
+					GameManager.initGameData(val -> {
+						SwingUtilities.invokeLater(() -> {
+							progressBar.setValue(val);
+							progressBar.paintImmediately(rect);
+						});});
+					
+					
+					SwingUtilities.invokeLater(() -> progressBar.setString("初始化完成！"));
 					try {
 						Thread.sleep(400);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					EntryFrame.instance.changeToEntryPanel();
+					SwingUtilities.invokeLater(() -> EntryFrame.instance.changeToEntryPanel());
 				} catch (Exception e1) {
-					progressBar.setString("初始化失败！");
+					SwingUtilities.invokeLater(() -> progressBar.setString("初始化失败！"));
 					e1.printStackTrace();
 				}
-			}
 		});
 		
 		add(progressBar);

@@ -177,11 +177,10 @@ public class GameStartPanel extends JPanel{
 	}
 	
 	private void writeRecord(){
-		String curText = record.getText();
-		if("".equals(curText)){
+		if("".equals(record.getText())){
 			record.setText(GameManager.getCurWord());
 		}else{
-			record.setText(curText + "\n" + GameManager.getCurWord());
+			record.append("\n" + GameManager.getCurWord());
 		}
 		
 		record.setCaretPosition(record.getText().length()); 

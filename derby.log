@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Sat Jan 12 09:13:53 CST 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0168-3f9f-566d-000006f897f8 
-on database directory F:\eclipse_work_space2\ChengYuJieLong\mydb with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
-Loaded from file:/F:/eclipse_work_space2/ChengYuJieLong/lib/derby.jar
+Sat Oct 26 10:56:51 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-016e-05fe-bd8a-000006e9cfc0 
+on database directory G:\wai_bao\ChengYuJieLong\ChengYuJieLong\ChengYuJieLong\mydb with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
+Loaded from file:/G:/wai_bao/ChengYuJieLong/ChengYuJieLong/ChengYuJieLong/lib/derby.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_121-b13
-user.dir=F:\eclipse_work_space2\ChengYuJieLong
+user.dir=G:\wai_bao\ChengYuJieLong\ChengYuJieLong\ChengYuJieLong
 os.name=Windows 7
 os.arch=amd64
 os.version=6.1
